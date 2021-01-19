@@ -2,8 +2,6 @@ import styled from "styled-components"
 
 /* ------------GENERIC COMPONENTS------------ */
 export const TopBar = styled.div`
-    position:absolute;
-    top:0px;
     background-color:rgba(218, 214, 214, 0.836);
     width:100%;
     height:57px;
@@ -132,11 +130,108 @@ export const LoginBody =styled.div`
     justify-content:center;
     align-items:center;
 `;
-export const EditBody =styled.div`
+/* --------------LIST USERS----------- */
+export const ListBody =styled.div`
     width:100%;
     background-image:linear-gradient(to top,gray,silver,white);
-    height:100vh;
+    height:auto;
+    min-height:100vh;
     display:flex;
-    justify-content:center;
+    flex-direction:column;
+    justify-content:flex-start;
     align-items:center;
+    flex-wrap:nowrap;
 `;
+export const ListContainer =styled.div`
+    margin-top:50px;
+    width:95%;
+    background-color:rgba(200, 202, 60, 0.658);
+    height:auto;
+    display:flex;
+    align-items:top;
+    justify-content:center;
+    padding:5px;
+    flex-wrap:wrap;
+`;
+export const List =styled.div`
+    width:100%;
+    background-color:rgba(200, 202, 60, 0.658);
+    height:auto;
+    display:flex;
+    align-items:top;
+    flex-direction:column;
+    justify-content:flex-start;
+    padding:5px;
+`;
+export const ListHeader =styled.div`
+    background-color:white;
+    align-items:center;
+    display:flex;
+    justify-content:space-around;
+    width:100%;
+    height:50px;
+    h2{
+        color:black;
+        margin:0px;
+        width:25%;
+    }
+`
+export const ListRow =styled.div`
+    background-color:white;
+    align-items:center;
+    display:flex;
+    justify-content:space-around;
+    width:100%;
+    height:auto;
+    background-color:gray;
+    margin-bottom:1px;
+    span{
+        margin-left:5px;
+        width:25%;
+        overflow:hidden;
+        text-overflow:ELLIPSIS;
+        height:100%;
+        min-height:40px;
+        display:flex;
+        align-items:center;
+        color:white;
+    }
+    
+`;
+export const ToolsListBarS =styled.div`
+    width:100%;
+    height:50px;
+    display:flex;
+`;
+export const SearchBar =styled.div`
+    width:50%;
+    height:100%;
+    display:flex;
+    align-items:center;
+    form{
+        display:flex;
+        align-items:center;
+        input{
+            height:30px;
+            border-radius:5px;
+        }
+        button{
+            background-color:rgba(200, 202, 60, 0);
+            border:none;
+            outline: thin dotted;
+            outline: 0px auto -webkit-focus-ring-color;
+            outline-offset: 0px;
+            cursor:pointer;
+            img{
+            background-color:rgba(200, 202, 60, 0);
+        }
+        }
+       
+    }
+`;
+export const Pages =styled.div`
+    width:50%;
+    height:100%;
+    display:flex;
+`;
+

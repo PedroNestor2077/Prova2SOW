@@ -1,13 +1,13 @@
 import NavBar from "./generic/navBar"
-import {EditBody} from "./style"
+import {ListBody} from "./style"
 import UserInput from "./generic/userInput"
-import EditUser from "./generic/editUser"
+import ListUser from "./generic/listUser"
 function EditPage() {
   return (
-    <EditBody>
+    <ListBody>
       <NavBar />
-      <EditUser />
-    </EditBody>
+      <ListUser />
+    </ListBody>
   );
 }
 export default EditPage;

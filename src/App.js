@@ -1,8 +1,8 @@
 import './App.css';
-import AddPage from "./components/addPage"
+import ListPage from "./components/listPage"
 function App() {
   return (
-    <AddPage/>  
+    <ListPage /> 
   );
 }
 export default App;
