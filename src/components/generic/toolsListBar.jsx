@@ -1,7 +1,10 @@
-import React from "react"
+import React,{userState} from "react"
 import {ToolsListBarS,SearchBar,Pages} from "../style"
 import ListRow from "../generic/listRow"
+import { useState } from "react"
 function ToolsListBar(){
+    const [Page,setPage]=useState("1")
+    
     return(
         <ToolsListBarS>
             <SearchBar>
@@ -13,7 +16,11 @@ function ToolsListBar(){
                 </form>
             </SearchBar>
             <Pages>
-
+                <span>
+                    <button> ≺ </button>
+                    <p>{Page}</p>
+                    <button> ≻ </button>
+                </span>
             </Pages>
         </ToolsListBarS>
     )

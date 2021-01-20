@@ -6,7 +6,7 @@ function EditPage() {
   return (
     <ListBody>
       <NavBar />
-      <ListUser />
+       <ListUser /> 
     </ListBody>
   );
 }

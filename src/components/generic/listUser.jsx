@@ -1,7 +1,8 @@
 import React from "react"
-import {ListContainer,ListHeader,List} from "../style"
+import {ListContainer,ListHeader,List, PopUpButton} from "../style"
 import ListRow from "../generic/listRow"
 import ToolsListBar from "../generic/toolsListBar"
+import PopUpDel from "../generic/popUpDel"
 function ListUser(){
     const myUsers=[
         {
@@ -75,6 +76,7 @@ function ListUser(){
         email={user.email}
         city={user.city}/>
     })
+
     return(
         <ListContainer>
             <ToolsListBar/>
@@ -88,7 +90,7 @@ function ListUser(){
                 </ListHeader>
                 {UsersRender}
             </List>
-
+            
         </ListContainer>
     )
 };

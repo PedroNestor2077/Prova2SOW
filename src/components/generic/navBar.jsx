@@ -1,5 +1,6 @@
 import React,{useState} from "react"
 import {TopBar} from "../style"
+import {Link} from "react-router-dom"
 function NavBar(){
     return(
         <TopBar >
@@ -8,15 +9,15 @@ function NavBar(){
             </span>
             <div>
                 <button>
-                    <img src="/images/icons/ico_edit.png" width="48px"></img>
-                    EDIT
+                    <img src="/images/icons/ico_add.png" width="35px"></img>
+                    <Link to="/add">Add</Link>
                 </button>
                 <button>
-                    <img src="/images/icons/ico_list.png" width="30px"></img>
-                    LIST
+                    <img src="/images/icons/ico_list.png" width="23px"></img>
+                    <Link to="/users">Users</Link>
                 </button>
             </div>
-            <a href="#">Singout</a>
+            <Link to="/">Singout</Link>
         </TopBar>
     );
 };

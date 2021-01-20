@@ -2,33 +2,54 @@ import styled from "styled-components"
 
 /* ------------GENERIC COMPONENTS------------ */
 export const TopBar = styled.div`
-    background-color:rgba(218, 214, 214, 0.836);
+    background-color:rgba(32, 32, 32, 0.834);
     width:100%;
     height:57px;
     display:flex;
     justify-content:center;
     span{
-        background-color:rgba(0.0.0.);
+        margin-top:3px;
+        background-color:rgba(228, 222, 222, 0.934);
         height:100px;
-        width:20%;
+        width:17%;
+        border-radius:100px 0px;
         cursor:pointer;
         display:flex;
-        justify-content:flex-end;
+        justify-content:center;
+        box-shadow:5px 5px 10px rgba(0, 0, 222, 0.634);
+        img{
+            pointer-events:none;
+        }
     }
     div{
         display:flex;
         justify-content:center;
-        width:70%;
-    }
-    button{
-        display:flex;
-        justify-content:flex-start;
         align-items:center;
-        width:15%;
-        max-width:130px;
+        width:75%;
+            button{
+            margin-right:10px;
+            display:flex;
+            justify-content:flex-start;
+            align-items:center;
+            width:10%;
+            max-width:130px;
+            color:white;
+            font-size:20px;
+            background-color:transparent;
+            outline: thin dotted;
+            outline: 0px auto -webkit-focus-ring-color;
+            outline-offset: 0px;
+            height:50%;
+            border:none;
+            cursor:pointer;
+                img{
+                    margin-right:5px;
+        }
+    }
     }
     a{
         width:3%;
+        color:white;
     }
 `;
 export const UserInputS = styled.div`
@@ -55,6 +76,7 @@ export const LoginFormS = styled.div`
     height:280px;
     border-radius:30px;
     background-color:rgba(243, 239, 239, 0.685);
+    margin-top:50px;
     form{
         display:flex;
         justify-content:space-around;
@@ -90,10 +112,13 @@ export const LoginFormS = styled.div`
 export const AddBody =styled.div`
     width:100%;
     background-image:linear-gradient(to top,gray,silver,white);
-    height:100vh;
+    height:auto;
+    min-height:100vh;
     display:flex;
-    justify-content:center;
+    flex-direction:column;
+    justify-content:flex-start;
     align-items:center;
+    flex-wrap:nowrap;;
 `;
 export const UserForm = styled.div`
     display:flex;
@@ -105,6 +130,7 @@ export const UserForm = styled.div`
     height:400px;
     border-radius:30px;
     background-color:rgba(243, 239, 239, 0.685);
+    margin-top:50px;
     form{
         display:flex;
         justify-content:space-around;
@@ -125,10 +151,13 @@ export const UserForm = styled.div`
 export const LoginBody =styled.div`
     width:100%;
     background-image:linear-gradient(to top,gray,silver,white);
-    height:100vh;
+    height:auto;
+    min-height:100vh;
     display:flex;
-    justify-content:center;
+    flex-direction:column;
+    justify-content:flex-start;
     align-items:center;
+    flex-wrap:nowrap;
 `;
 /* --------------LIST USERS----------- */
 export const ListBody =styled.div`
@@ -186,8 +215,8 @@ export const ListRow =styled.div`
     background-color:gray;
     margin-bottom:1px;
     span{
-        margin-left:5px;
         width:25%;
+        margin-left:5px;
         overflow:hidden;
         text-overflow:ELLIPSIS;
         height:100%;
@@ -195,8 +224,7 @@ export const ListRow =styled.div`
         display:flex;
         align-items:center;
         color:white;
-    }
-    
+        justify-content:flex-start;
 `;
 export const ToolsListBarS =styled.div`
     width:100%;
@@ -233,5 +261,51 @@ export const Pages =styled.div`
     width:50%;
     height:100%;
     display:flex;
+    justify-content:flex-end;
+    span{
+        width:100%;
+        display:flex;
+        height:100%;
+        color:white;
+        align-items:center;
+        justify-content:flex-end;
+        button{
+            height:50%;
+        }
+    }
+`;
+export const PopUpDelS =styled.div`
+    position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:rgba(59, 59, 59, 0.801);
+    span{
+        background-color:transparent;
+        width:300px;
+        height:50px;
+        display:flex; 
+        flex-wrap:wrap;
+    }
+    h3{
+        color:white;
+        text-align:center;
+        width:100%;
+    }
+`;
+export const PopUpButton =styled.button`
+    background-color:${props => `${props.color}`};
+    width:50%;
+    border:solid white 2px;
+    outline: thin dotted;
+    outline: 0px auto -webkit-focus-ring-color;
+    outline-offset: 0px;
+    cursor:pointer;
+    height:50px;
+
 `;
 
