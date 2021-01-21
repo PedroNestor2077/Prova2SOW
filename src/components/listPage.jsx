@@ -5,7 +5,7 @@ import ListUser from "./generic/listUser"
 function EditPage() {
   return (
     <ListBody>
-      <NavBar />
+        <NavBar />
        <ListUser /> 
     </ListBody>
   );
