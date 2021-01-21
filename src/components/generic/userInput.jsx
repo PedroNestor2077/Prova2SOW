@@ -5,8 +5,8 @@ function UserInput(props){
 
     return(
         <UserInputS width={props.width}>
-            <img src={props.src} alt={props.alt} width="20px" value=""></img>
-            <input type={props.type} placeholder={props.placeholder} name={props.name}>
+            <img src={props.src} alt={props.alt} width="20px"></img>
+            <input type={props.type} placeholder={props.placeholder} id={props.id} requered="true">
             </input>
             <img src={Valid} width="20px" allt=""></img>
         </UserInputS>
