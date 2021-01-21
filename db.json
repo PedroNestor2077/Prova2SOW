@@ -1,42 +1,43 @@
 {
-  "usuarios":[
-        {   "id":"1",
-            "nome":"foo bar12",
-            "cpf": "213.123.123-45",
-            "email":"foo_bar@email.com",
-            "endereco":{
-                "cep": 13454000,
-                "rua":"rua talvez",
-                "numero": 785,
-                "bairro": "bairro azul",
-                "cidade": "cidade eterna"
-            }
-        },
-        {
-            "id":"2",
-            "nome":"foo bar2",
-            "cpf": "213.123.123-45",
-            "email":"foo_bar@email.com",
-            "endereco":{
-                "cep": 13454000,
-                "rua":"rua talvez",
-                "numero": 785,
-                "bairro": "bairro azul",
-                "cidade": "cidade eterna"
-            }
-        },
-        {
-            "id":"3",
-            "nome":"foo bar3",
-            "cpf": "213.123.123-45",
-            "email":"foo_bar@email.com",
-            "endereco":{
-                "cep": 13454000,
-                "rua":"rua talvez",
-                "numero": 785,
-                "bairro": "bairro azul",
-                "cidade": "cidade eterna"
-            }
-        }
+  "usuarios": [
+    {
+      "id": 1,
+      "nome": "foo bar12",
+      "cpf": "213.123.123-45",
+      "email": "foo_bar@email.com",
+      "endereco": {
+        "cep": 13454000,
+        "rua": "rua talvez",
+        "numero": 785,
+        "bairro": "bairro azul",
+        "cidade": "cidade eterna"
+      }
+    },
+    {
+      "id": 2,
+      "nome": "foo bar2",
+      "cpf": "213.123.123-45",
+      "email": "foo_bar@email.com",
+      "endereco": {
+        "cep": 13454000,
+        "rua": "rua talvez",
+        "numero": 785,
+        "bairro": "bairro azul",
+        "cidade": "cidade eterna"
+      }
+    },
+    {
+      "id": 3,
+      "nome": "foo bar3",
+      "cpf": "213.123.123-45",
+      "email": "foo_bar@email.com",
+      "endereco": {
+        "cep": 13454000,
+        "rua": "rua talvez",
+        "numero": 785,
+        "bairro": "bairro azul",
+        "cidade": "cidade eterna"
+      }
+    }
   ]
 }

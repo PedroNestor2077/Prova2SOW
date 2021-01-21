@@ -5,16 +5,23 @@ import ToolsListBar from "../generic/toolsListBar"
 import PopUpDel from "../generic/popUpDel"
 import {getUsers,ExportUsers,UsersList} from "../data"
 function ListUser(){
-    const USERS=UsersList
+    const Mydb="http://localhost:5000/usuarios"
     const [Lista,setLista]=useState()
-    function update(){
+    async function update(){
+        setLista(<h1>loading...</h1>)
+        const UsersResponse=await fetch(Mydb);
+        const MyUsers=await UsersResponse.json()
         /* buscar uma fonte de usuarios */
         const RowList=[]
-        for (var user in USERS){
-            RowList.push(<ListRow key={USERS[user].name} name={USERS[user].nome}/>)
+        for (var user in MyUsers){
+            RowList.push(<ListRow 
+                key={MyUsers[user].id} name={MyUsers[user].nome} cpf={MyUsers[user].cpf}
+                email={MyUsers[user].email} city={MyUsers[user].endereco.cidade}
+                    />)
         }
         setLista(RowList)
     }
+    useEffect(()=>update(),[])
     return(
         <ListContainer>
                 <ToolsListBar/>
