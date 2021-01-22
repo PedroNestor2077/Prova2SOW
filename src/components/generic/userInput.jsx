@@ -4,7 +4,7 @@ function UserInput(props){
     return(
         <UserInputS width={props.width} >
             <img 
-                src={props.src} width="20px">
+                src={props.src} width="25px">
             </img>
 
             <input 

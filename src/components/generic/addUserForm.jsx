@@ -1,5 +1,6 @@
 import {UserForm} from "../style"
 import UserInput from "./userInput"
+import NotLogged from "../generic/notLogged"
 import {checkEmail,checkCPF,sendToast,isEmpty,ViaCEP,
       dinamicEmail,dinamicNome,dinamicCPF,dinamicCidade,
       dinamicBairro,dinamicRua,dinamicNumero
@@ -106,43 +107,43 @@ function AddUserForm(props) {
     <UserForm>
       <div>
         <UserInput 
-          id_img="img-nome" placeholder="Username" src="/images/icons/ico_home.png" 
-          width="100" id="nome" Blur={dinamicNome} value={props.nome}
+          id_img="img-nome" placeholder="Username" src="/images/icons/ico_user_default.png" 
+           id="nome" Blur={dinamicNome} value={props.nome}
         />
         <UserInput 
-          id_img="img-cpf" placeholder="CPF" src="/images/icons/ico_home.png" 
-          width="100" id="cpf"  func={checkCPF} size={14} Blur={dinamicCPF} value={props.cpf}
+          id_img="img-cpf" placeholder="CPF" src="/images/icons/ico_cpf.png" 
+           id="cpf"  func={checkCPF} size={14} Blur={dinamicCPF} value={props.cpf}
         />
         <UserInput 
-          id_img="img-email" placeholder="Email" src="/images/icons/ico_home.png" 
-          width="100" id="email" Blur={dinamicEmail}  value={props.email}
+          id_img="img-email" placeholder="Email" src="/images/icons/ico_email.png" 
+           id="email" Blur={dinamicEmail}  value={props.email}
         />
         <UserInput 
-          id_img="img-cep"  placeholder="CEP" src="/images/icons/ico_home.png" 
-          width="100" id="cep" Blur={ViaCEP} value={props.cep}
+          id_img="img-cep"  placeholder="CEP" src="/images/icons/ico_endereco.png" 
+           id="cep" Blur={ViaCEP} value={props.cep}
         />
         <UserInput 
-          id_img="img-cidade"  placeholder="Cidade" src="/images/icons/ico_home.png" 
-          width="100" id="cidade" Blur={dinamicCidade} value={props.cidade}
+          id_img="img-cidade"  placeholder="Cidade" src="/images/icons/ico_cidade.png" 
+           id="cidade" Blur={dinamicCidade} value={props.cidade}
         />
         <UserInput 
-          id_img="img-bairro"  placeholder="Bairro" src="/images/icons/ico_home.png" 
-          width="100" id="bairro" Blur={dinamicBairro} value={props.bairro}
+          id_img="img-bairro"  placeholder="Bairro" src="/images/icons/ico_endereco.png" 
+           id="bairro" Blur={dinamicBairro} value={props.bairro}
         />
         <UserInput 
-          id_img="img-rua"  placeholder="Rua" src="/images/icons/ico_home.png" 
-          width="100" id="rua" Blur={dinamicRua} value={props.rua}
+          id_img="img-rua"  placeholder="Rua" src="/images/icons/ico_endereco.png" 
+           id="rua" Blur={dinamicRua} value={props.rua}
         />
         <UserInput 
           id_img="img-numero"  placeholder="Número" src="/images/icons/ico_home.png" 
-          width="100" id="numero" type="number" Blur={dinamicNumero} value={props.numero}
+           id="numero" type="number" Blur={dinamicNumero} value={props.numero}
         />
         <button onClick={doSubmit}>Confirmar</button>
       </div>
     </UserForm>
   );}
   else{
-    return <h1>Not logged! <a href="/">-Click here to login</a></h1>
+    return <NotLogged/>
   }
 }
 export default AddUserForm;

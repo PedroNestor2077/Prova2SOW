@@ -2,6 +2,7 @@ import React,{useEffect,useState} from "react"
 import {ListContainer,ListHeader,List} from "../style"
 import ListRow from "../generic/listRow"
 import {ToolsListBarS,SearchBar,Pages} from "../style"
+import NotLogged from "../generic/notLogged"
 function ListUser(){
     const options={
         method:'GET',
@@ -37,10 +38,8 @@ function ListUser(){
         let url=`http://localhost:5000/usuarios?q=${text}&attr=nome`
         update(url)
     };
-
     /* Atualizar a lista sempre que a lista for renderizada */
     useEffect(()=>update("http://localhost:5000/usuarios"),[])
-
     if (localStorage.getItem("logged")=="true"){
         return(
         <ListContainer>
@@ -75,7 +74,7 @@ function ListUser(){
             </ListContainer> 
         );
     }else{
-        return <a href="/">Click here to login</a>
+        return <NotLogged/>
     }
 };
 export default ListUser

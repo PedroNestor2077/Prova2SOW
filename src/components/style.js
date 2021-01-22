@@ -132,7 +132,7 @@ export const UserForm = styled.div`
     border-radius:30px;
     background-color:rgba(243, 239, 239, 0.685);
     margin-top:50px;
-    form{
+    div{
         display:flex;
         justify-content:space-around;
         flex-direction:column;
@@ -310,7 +310,7 @@ export const PopUpButton =styled.button`
 
 `;
 export const EditPageS =styled.button`
-position:absolute;
+    position:absolute;
     top:0px;
     left:0px;
     width:100%;
@@ -319,12 +319,15 @@ position:absolute;
     justify-content:center;
     align-items:center;
     background-color:rgba(59, 59, 59, 0.801);
+    div{
+        background-color:blue;
+        a{
+            position:relative;
+            left:46%;
+            top:3px;
+        }
+    }
 
-`;
-export const FormEdit =styled.button`
-    background-color:red;
-    width:80%;
-    height:60%;
 `;
 
 
