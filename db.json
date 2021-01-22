@@ -1,3 +1,30 @@
 {
-  "usuarios": []
+  "usuarios": [
+    {
+      "id": 4,
+      "nome": "pedro",
+      "cpf": "100.321.336.77",
+      "email": "pedro_pratapolis@hotmail.com",
+      "endereco": {
+        "cep": "37970000",
+        "rua": "rua2",
+        "numero": "1",
+        "bairro": "moca",
+        "cidade": "Pratápolis"
+      }
+    },
+    {
+      "id": 5,
+      "nome": "pedro",
+      "cpf": "100.321.336.77",
+      "email": "pedro_pratapolis@hotmail.com",
+      "endereco": {
+        "cep": "37970000",
+        "rua": "rua2",
+        "numero": "2",
+        "bairro": "moca",
+        "cidade": "Pratápolis"
+      }
+    }
+  ]
 }

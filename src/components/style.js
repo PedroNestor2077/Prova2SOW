@@ -77,11 +77,12 @@ export const LoginFormS = styled.div`
     border-radius:30px;
     background-color:rgba(243, 239, 239, 0.685);
     margin-top:50px;
-    form{
+    div{
         display:flex;
         justify-content:space-around;
         flex-direction:column;
         height:50%;
+        width:auto;
         button{
             height:35px;
             background-color:rgb(60, 81, 202);
@@ -308,4 +309,22 @@ export const PopUpButton =styled.button`
     height:50px;
 
 `;
+export const EditPageS =styled.button`
+position:absolute;
+    top:0px;
+    left:0px;
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-color:rgba(59, 59, 59, 0.801);
+
+`;
+export const FormEdit =styled.button`
+    background-color:red;
+    width:80%;
+    height:60%;
+`;
+
 
