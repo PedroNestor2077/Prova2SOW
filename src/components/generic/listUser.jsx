@@ -15,7 +15,7 @@ function ListUser(){
         const RowList=[]
         for (var user in MyUsers){
             RowList.push(<ListRow 
-                key={MyUsers[user].id} name={MyUsers[user].nome} cpf={MyUsers[user].cpf}
+                key={MyUsers[user].id} id={MyUsers[user].id} name={MyUsers[user].nome} cpf={MyUsers[user].cpf}
                 email={MyUsers[user].email} city={MyUsers[user].endereco.cidade}
                     />)
         }

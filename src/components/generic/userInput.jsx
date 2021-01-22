@@ -4,11 +4,11 @@ function UserInput(props){
     const [Valid,setValid]=useState("")
 
     return(
-        <UserInputS width={props.width}>
-            <img src={props.src} alt={props.alt} width="20px"></img>
-            <input type={props.type} placeholder={props.placeholder} id={props.id} requered="true">
+        <UserInputS width={props.width} >
+            <img src={props.src} width="20px" ></img>
+            <input type={props.type} placeholder={props.placeholder} id={props.id}  onChange={props.func} maxLength={props.size} onBlur={props.Blur} type={props.type} value={props.value}>
             </input>
-            <img src={Valid} width="20px" allt=""></img>
+            <img  width="20px" allt="" id={props.id_img}></img>
         </UserInputS>
     )
 };
