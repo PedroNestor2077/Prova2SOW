@@ -1,7 +1,6 @@
 import React,{useState} from "react"
 import {TopBar} from "../style"
 import {Link} from "react-router-dom"
-import Toast from "../generic/toast"
 function NavBar(){
     if (localStorage.getItem("logged")=="true"){
         return( 

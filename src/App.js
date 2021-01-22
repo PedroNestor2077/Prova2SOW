@@ -1,4 +1,3 @@
-import './App.css';
 import ListPage from "./components/listPage"
 import LoginPage from "./components/loginPage"
 import AddPage from "./components/addPage"
