@@ -7,8 +7,6 @@ export const TopBar = styled.div`
     height:80px;
     display:flex;
     justify-content:center;
-    position:fixed;
-    top:0px;
     span{
         margin-top:3px;
         background-color:white;
@@ -95,7 +93,6 @@ export const UserInputS = styled.span`
         }
     }
 `;
-
 /* ------------------ADD USER----------- */
 export const AddBody =styled.div`
     width:100%;
@@ -104,13 +101,9 @@ export const AddBody =styled.div`
     min-height:100vh;
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:flex-start;
     align-items:center;
     flex-wrap:nowrap;;
-    margin-top:80px;
-    h1{
-        margin:0px;
-    }
 `;
 export const UserForm = styled.div`
     display:flex;
@@ -127,17 +120,28 @@ export const UserForm = styled.div`
         display:flex;
         justify-content:space-around;
         flex-direction:column;
-        height:90%;
+        height:100%;
         width:95%;
+        align-items:center;
         button{
-            height:35px;
+            width:30%;
+            height:45px;
             background-color:rgb(60, 81, 202);
             border:none;
             border-radius:5px;
             color:white;
             font-size:20px;
             margin-top:10px;
-
+            cursor:pointer;
+            outline: thin dotted;
+            outline: 0px auto -webkit-focus-ring-color;
+            outline-offset: 0px;
+            box-shadow:2px 2px 2px 1px rgba(0,0,0,.5);
+            &:hover{
+                background-color:blue;
+                text-shadow:2px 2px black;
+                box-shadow:2px 2px 2px 1px rgba(0,0,0,.7);
+            }
         }
     }
 `;
@@ -149,7 +153,7 @@ export const LoginBody =styled.div`
     min-height:100vh;
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:flex-start;
     align-items:center;
     flex-wrap:nowrap;
 `;
@@ -162,7 +166,7 @@ export const LoginFormS = styled.div`
     height:100%;
     border-radius:30px;
     background-color:rgb(192, 188, 188);
-    margin-bottom:10px;
+    margin-top:30px;
     padding:10px;
     div{
         display:flex;
@@ -171,7 +175,7 @@ export const LoginFormS = styled.div`
         height:90%;
         width:95%;
         button{
-            height:35px;
+            height:45px;
             background-color:rgb(60, 81, 202);
             border:none;
             border-radius:5px;
@@ -199,30 +203,33 @@ export const ListBody =styled.div`
     min-height:100vh;
     display:flex;
     flex-direction:column;
-    justify-content:center;
+    justify-content:flex-start;
     align-items:center;
     flex-wrap:nowrap;
 `;
 export const ListContainer =styled.div`
-    margin-top:50px;
+    margin-top:30px;
     width:95%;
-    background-color:rgba(200, 202, 60, 0.658);
-    height:auto;
+    background-color:white;
+    height:80vh;
     display:flex;
     align-items:top;
-    justify-content:center;
+    justify-content:flex-start;
     padding:5px;
     flex-wrap:wrap;
 `;
 export const List =styled.div`
     width:100%;
-    background-color:rgba(200, 202, 60, 0.658);
-    height:auto;
+    background-color:white;
+    border:solid black 3px;
+    height:90%;
     display:flex;
     align-items:top;
     flex-direction:column;
     justify-content:flex-start;
+    align-items:top;
     padding:5px;
+    border-radius:4px;
 `;
 export const ListHeader =styled.div`
     background-color:white;
@@ -243,20 +250,37 @@ export const ListRow =styled.div`
     display:flex;
     justify-content:space-around;
     width:100%;
-    height:auto;
-    background-color:gray;
-    margin-bottom:1px;
-    span{
+    height:40px;
+    background-color:rgb(226, 223, 223);
+    margin-top:2px;
+    border-top:solid black 1px;
+    span{  
         width:25%;
         margin-left:5px;
         overflow:hidden;
         text-overflow:ELLIPSIS;
         height:100%;
-        min-height:40px;
+        min-height:39px;
         display:flex;
         align-items:center;
-        color:white;
+        color:black;
         justify-content:flex-start;
+        button{
+            background-color:transparent;
+            border:none;
+            outline: thin dotted;
+            outline: 0px auto -webkit-focus-ring-color;
+            outline-offset: 0px;
+            cursor:pointer;
+            &:hover{
+                position:relative;
+                bottom:3px;
+            }
+        }
+    }  
+    &:hover{
+        box-shadow:0px 0px 5px 2px rgba(0,0,0,.6);
+    }
 `;
 export const ToolsListBarS =styled.div`
     width:100%;
@@ -268,12 +292,13 @@ export const SearchBar =styled.div`
     height:100%;
     display:flex;
     align-items:center;
-    form{
+    div{
         display:flex;
         align-items:center;
         input{
             height:30px;
             border-radius:5px;
+            font-size:20px;
         }
         button{
             background-color:rgba(200, 202, 60, 0);
@@ -298,47 +323,18 @@ export const Pages =styled.div`
         width:100%;
         display:flex;
         height:100%;
-        color:white;
+        color:black;
         align-items:center;
         justify-content:flex-end;
         button{
             height:50%;
         }
+        p{
+            font-size:20px;
+            margin-right:5px;
+            margin-left:5px;
+        }
     }
-`;
-export const PopUpDelS =styled.div`
-    position:absolute;
-    top:0px;
-    left:0px;
-    width:100%;
-    height:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    background-color:rgba(59, 59, 59, 0.801);
-    span{
-        background-color:transparent;
-        width:300px;
-        height:50px;
-        display:flex; 
-        flex-wrap:wrap;
-    }
-    h3{
-        color:white;
-        text-align:center;
-        width:100%;
-    }
-`;
-export const PopUpButton =styled.button`
-    background-color:${props => `${props.color}`};
-    width:50%;
-    border:solid white 2px;
-    outline: thin dotted;
-    outline: 0px auto -webkit-focus-ring-color;
-    outline-offset: 0px;
-    cursor:pointer;
-    height:50px;
-
 `;
 export const EditPageS =styled.button`
     position:absolute;
@@ -359,9 +355,10 @@ export const EditPageS =styled.button`
         justify-content:center;
         flex-direction:column;
         border-radius:10px;
+        width:auto;
         a{
             position:relative;
-            left:46%;
+            left:44%;
             top:3px;
         }
     }

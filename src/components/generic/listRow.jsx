@@ -32,11 +32,11 @@ function ListUser(props){
             <span >
                 <button 
                     id={props.id} onClick={del}>
-                    delete
+                    <img width="20px" src="images/icons/ico_delete.png"></img>
                 </button>
                 <button
                     id={props.id} onClick={edit}>
-                    edit
+                    <img width="20px" src="images/icons/ico_edit.png"></img>
                 </button>
             </span>
             {/* State que retorna a página "EditPage*/}
