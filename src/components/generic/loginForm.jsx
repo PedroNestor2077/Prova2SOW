@@ -11,12 +11,12 @@ function LoginForm(){
             </span>
             <div>
                 <UserInput 
-                    id_img="img-email" placeholder="Email" src="/images/icons/ico_home.png" 
-                    width="100" id="email" Blur={dinamicEmail}
+                    id_img="img-email" placeholder="Email" src="/images/icons/ico_email.png" 
+                     id="email" Blur={dinamicEmail}
                 ></UserInput>
                 <UserInput 
                     id_img="img-password" placeholder="Password" type="password"
-                    src="/images/icons/ico_home.png" width="100" id="password" Blur={checkPassword}>
+                    src="/images/icons/ico_password.png"  id="password" Blur={checkPassword}>
                  </UserInput>
                 <button onClick={doLogin}>Login</button>
             </div>

@@ -6,7 +6,7 @@ function EditPage(props){
         <EditPageS >   
             <div>
                 <a href="/users"><img src="/images/icons/ico_close.png" width="40px"></img></a>
-                <h3>Edit user- {props.nome}</h3>
+                <h1>Editar usuário- {props.nome}</h1>
                     {/* Passar props para setar os dados do usuario nas caixas de input */}
                     <AddUserForm 
                         nome={props.nome} cpf={props.cpf} email={props.email} cep={props.cep} 

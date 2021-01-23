@@ -4,15 +4,18 @@ import styled from "styled-components"
 export const TopBar = styled.div`
     background-color:rgba(32, 32, 32, 0.834);
     width:100%;
-    height:57px;
+    height:80px;
     display:flex;
     justify-content:center;
+    position:fixed;
+    top:0px;
     span{
         margin-top:3px;
-        background-color:rgba(228, 222, 222, 0.934);
-        height:100px;
-        width:17%;
+        background-color:white;
+        height:90px;
+        width:200px;
         border-radius:100px 0px;
+        min-width:180px;
         cursor:pointer;
         display:flex;
         justify-content:center;
@@ -25,13 +28,12 @@ export const TopBar = styled.div`
         display:flex;
         justify-content:center;
         align-items:center;
-        width:75%;
+        width:70%;
             button{
-            margin-right:10px;
             display:flex;
             justify-content:flex-start;
             align-items:center;
-            width:10%;
+            width:50%;
             max-width:130px;
             color:white;
             font-size:20px;
@@ -44,94 +46,83 @@ export const TopBar = styled.div`
             cursor:pointer;
                 img{
                     margin-right:5px;
-        }
+                }            
     }
+    }
+    form{
+        position:fixed;
+        top:0px;
+        right:0px;
+        padding:5px;
     }
     a{
-        width:3%;
+        text-decoration:none;
         color:white;
-    }
-`;
-export const UserInputS = styled.div`
-    background-color:white;
-    width:auto;
-    height:auto;
-    display:flex;
-    justify-content:flex-start;
-    border:none;
-    input{
-        margin-left:10px;
-        height:30px;
-        width:${props =>`${props.width}%`};
-        border:none;
-    }
-`;
-export const LoginFormS = styled.div`
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    align-items:center;
-    background-color:red;
-    width:250px;
-    height:280px;
-    border-radius:30px;
-    background-color:rgba(243, 239, 239, 0.685);
-    margin-top:50px;
-    div{
-        display:flex;
-        justify-content:space-around;
-        flex-direction:column;
-        height:50%;
-        width:auto;
-        button{
-            height:35px;
-            background-color:rgb(60, 81, 202);
-            border:none;
-            border-radius:5px;
-            color:white;
-            font-size:20px;
+        font-size:1.3em;
+        &:hover{
+            text-decoration:underline;
         }
-    }
-    span{
-        display:flex;
-        flex-wrap:wrap ;
-        justify-content:center;
-
-        img{
-            border:solid 1px black;
-            border-radius:200px;
-        }
-        h3{
-            margin:0px;
-            width:100%;
-            text-align:center;
+        &:active{
             color:black;
         }
     }
 `;
+export const UserInputS = styled.span`
+    width:100%;
+    height:50px;
+    display:flex;
+    justify-content:flex-start;
+    border:none;
+    background-color:white;
+    align-items:center;
+    flex-wrap:nowrap;
+    margin-top:10px;
+    min-width:100%;
+    padding-left:5px;
+    border-radius:5px;
+    input{
+        height:80%;
+        width:100%;
+        border:none;
+        margin-left:10px;
+        margin-right:10px;
+        outline:none;
+        outline: 0px auto -webkit-focus-ring-color;
+        outline-offset: 0px;
+        font-size:20px;
+        &:focus{
+            box-shadow:0px 0px 10px 2px rgba(0, 0, 255, 0.788);
+        }
+    }
+`;
+
 /* ------------------ADD USER----------- */
 export const AddBody =styled.div`
     width:100%;
-    background-image:linear-gradient(to top,gray,silver,white);
+    background-color:white;
     height:auto;
     min-height:100vh;
     display:flex;
     flex-direction:column;
-    justify-content:flex-start;
+    justify-content:center;
     align-items:center;
     flex-wrap:nowrap;;
+    margin-top:80px;
+    h1{
+        margin:0px;
+    }
 `;
 export const UserForm = styled.div`
     display:flex;
     justify-content:center;
     flex-wrap:wrap;
     align-items:center;
-    background-color:red;
-    width:600px;
-    height:400px;
+    width:90%;
+    height:100%;
     border-radius:30px;
-    background-color:rgba(243, 239, 239, 0.685);
-    margin-top:50px;
+    background-color:rgb(192, 188, 188);
+    padding:20px;
+    margin-top:30px;
     div{
         display:flex;
         justify-content:space-around;
@@ -145,30 +136,70 @@ export const UserForm = styled.div`
             border-radius:5px;
             color:white;
             font-size:20px;
+            margin-top:10px;
+
         }
     }
 `;
 /* -------------------LOGIN------------- */
 export const LoginBody =styled.div`
     width:100%;
-    background-image:linear-gradient(to top,gray,silver,white);
+    background-color:white;
     height:auto;
     min-height:100vh;
     display:flex;
     flex-direction:column;
-    justify-content:flex-start;
+    justify-content:center;
     align-items:center;
     flex-wrap:nowrap;
+`;
+export const LoginFormS = styled.div`
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    align-items:center;
+    width:30%;
+    height:100%;
+    border-radius:30px;
+    background-color:rgb(192, 188, 188);
+    margin-bottom:10px;
+    padding:10px;
+    div{
+        display:flex;
+        justify-content:space-around;
+        flex-direction:column;
+        height:90%;
+        width:95%;
+        button{
+            height:35px;
+            background-color:rgb(60, 81, 202);
+            border:none;
+            border-radius:5px;
+            color:white;
+            font-size:20px;
+            margin-top:10px;
+            cursor:pointer;
+            outline: thin dotted;
+            outline: 0px auto -webkit-focus-ring-color;
+            outline-offset: 0px;
+            box-shadow:2px 2px 2px 1px rgba(0,0,0,.5);
+            &:hover{
+                background-color:blue;
+                text-shadow:2px 2px black;
+                box-shadow:2px 2px 2px 1px rgba(0,0,0,.7);
+            }
+        }
+    }
 `;
 /* --------------LIST USERS----------- */
 export const ListBody =styled.div`
     width:100%;
-    background-image:linear-gradient(to top,gray,silver,white);
+    background-color:white;
     height:auto;
     min-height:100vh;
     display:flex;
     flex-direction:column;
-    justify-content:flex-start;
+    justify-content:center;
     align-items:center;
     flex-wrap:nowrap;
 `;
@@ -319,8 +350,15 @@ export const EditPageS =styled.button`
     justify-content:center;
     align-items:center;
     background-color:rgba(59, 59, 59, 0.801);
+    h3{
+        width:100%;
+    }
     div{
-        background-color:blue;
+        background-color:gray;
+        display:flex;
+        justify-content:center;
+        flex-direction:column;
+        border-radius:10px;
         a{
             position:relative;
             left:46%;

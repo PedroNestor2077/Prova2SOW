@@ -1,5 +1,5 @@
-import React,{useState} from "react"
-import {TopBar} from "../style"
+import React from "react"
+import {TopBar,SingOut} from "../style"
 import {Link} from "react-router-dom"
 function NavBar(){
     if (localStorage.getItem("logged")=="true"){
@@ -15,11 +15,14 @@ function NavBar(){
                     </button>
                     <button>
                         <img src="/images/icons/ico_list.png" width="23px"></img>
-                        <Link to="/users">Users</Link>
+                        <Link to="/users">Usuários</Link>
                     </button>
                 </div>
-                <Link to="/" onClick={()=>
-                localStorage.setItem('logged',false)}>Singout</Link>
+                <form>
+                    <Link to="/" onClick={()=>
+                        localStorage.setItem('logged',false)}>Singout
+                    </Link>
+                </form>
         </TopBar>
         );}
         else{

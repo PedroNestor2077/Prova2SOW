@@ -168,8 +168,8 @@ export function doLogin(){
   if (checkEmail(email) && checkPassword()){
     console.log("login!")
     localStorage.setItem("logged",true)
-    sendToast("Entrando")
-    setTimeout(()=>{window.location.href="/users"},2000)
+    sendToast('Prova Pedro Nestor-2SOW,Bem Vindo!')
+    setTimeout(()=>{window.location.href="/users"},4000)
   }
   else{
     sendToast("Dados inválidos!","error")
