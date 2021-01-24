@@ -23,12 +23,12 @@ function ListUser(){
         const MyUsers=await UsersResponse.json()
         /* Criar lista de elementos react para a listagem */
         const RowList=[]
-        for (var user in MyUsers){
+         for (var user in MyUsers){
             let nome=MyUsers[user].nome
             nome=nome.charAt(0).toUpperCase() + nome.slice(1)
             RowList.push(<ListRow 
                 key={MyUsers[user].id} 
-                id={MyUsers[user].id} 
+                userID={MyUsers[user].id} 
                 nome={nome}
                 cpf={MyUsers[user].cpf}
                 email={MyUsers[user].email} 
@@ -38,7 +38,7 @@ function ListUser(){
                 cep={MyUsers[user].endereco.cep} 
                 rua={MyUsers[user].endereco.rua}
                     />)
-        };
+        }; 
         if (RowList.length==0){
             setLista(
             <Load>

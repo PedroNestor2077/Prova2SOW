@@ -1,58 +1,6 @@
 {
   "usuarios": [
     {
-      "id": 1,
-      "nome": "Pedro ",
-      "cpf": "100.321.336.77",
-      "email": "contato.pedronestor@gmail.com",
-      "endereco": {
-        "cep": "37970000",
-        "rua": "rua2",
-        "numero": "123",
-        "bairro": "moca",
-        "cidade": "Pratápolis"
-      }
-    },
-    {
-      "id": 2,
-      "nome": "pedro 2",
-      "cpf": "100.321.336.77",
-      "email": "contato.pedronestor@gmail.com",
-      "endereco": {
-        "cep": "37970000",
-        "rua": "rua2",
-        "numero": "123",
-        "bairro": "moca",
-        "cidade": "Pratápolis"
-      }
-    },
-    {
-      "id": 3,
-      "nome": "pedro 3",
-      "cpf": "100.321.336.77",
-      "email": "contato.pedronestor@gmail.com",
-      "endereco": {
-        "cep": "37970000",
-        "rua": "rua2",
-        "numero": "123",
-        "bairro": "moca",
-        "cidade": "Pratápolis"
-      }
-    },
-    {
-      "id": 4,
-      "nome": "pedro 4",
-      "cpf": "100.321.336.77",
-      "email": "contato.pedronestor@gmail.com",
-      "endereco": {
-        "cep": "37970000",
-        "rua": "rua2",
-        "numero": "123",
-        "bairro": "moca",
-        "cidade": "Pratápolis"
-      }
-    },
-    {
       "id": 5,
       "nome": "pedro 5",
       "cpf": "100.321.336.77",
@@ -131,21 +79,8 @@
       }
     },
     {
-      "id": 11,
-      "nome": "eweweww 10",
-      "cpf": "100.321.336.77",
-      "email": "contato.pedronestor@gmail.com",
-      "endereco": {
-        "cep": "37970000",
-        "rua": "rua2",
-        "numero": "345",
-        "bairro": "moca",
-        "cidade": "Pratápolis"
-      }
-    },
-    {
       "id": 12,
-      "nome": "eweweww 11",
+      "nome": "Eweweww",
       "cpf": "100.321.336.77",
       "email": "contato.pedronestor@gmail.com",
       "endereco": {
@@ -217,6 +152,32 @@
         "cep": "37970000",
         "rua": "rua2",
         "numero": "2",
+        "bairro": "moca",
+        "cidade": "Pratápolis"
+      }
+    },
+    {
+      "id": 18,
+      "nome": "eweweww",
+      "cpf": "100.321.336.77",
+      "email": "pedro_pratapolis@hotmail.com",
+      "endereco": {
+        "cep": "37970000",
+        "rua": "rua2",
+        "numero": "5",
+        "bairro": "moca",
+        "cidade": "Pratápolis"
+      }
+    },
+    {
+      "id": 19,
+      "nome": "3333",
+      "cpf": "111.111.111-11",
+      "email": "pedro_pratapolis@hotmail.com",
+      "endereco": {
+        "cep": "37970000",
+        "rua": "rua2",
+        "numero": "3",
         "bairro": "moca",
         "cidade": "Pratápolis"
       }

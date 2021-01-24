@@ -245,7 +245,7 @@ export const ListHeader =styled.div`
         width:25%;
     }
 `
-export const ListRow =styled.div`
+export const ListRowS =styled.div`
     background-color:white;
     align-items:center;
     display:flex;
@@ -365,9 +365,9 @@ export const EditPageS =styled.div`
         border-radius:10px;
         width:auto;
         a{
-            position:relative;
-            left:44%;
-            top:3px;
+            width:100%;
+            display:flex;
+            justify-content:flex-end;
         }
     }
 
