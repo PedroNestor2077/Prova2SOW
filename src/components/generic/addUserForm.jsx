@@ -70,41 +70,48 @@ function AddUserForm(props) {
       }
     }
     fetch(Mydb,options)
-    .then(()=>{
-      let nome=document.getElementById("nome")
-      let cpf=document.getElementById("cpf")
-      let email=document.getElementById("email")
-      let cep=document.getElementById("cep")
-      let rua=document.getElementById("rua")
-      let numero=document.getElementById("numero")
-      let bairro=document.getElementById("bairro")
-      let cidade=document.getElementById("cidade")
-      let img_nome=document.getElementById("img-nome")
-      let img_cpf=document.getElementById("img-cpf")
-      let img_email=document.getElementById("img-email")
-      let img_cep=document.getElementById("img-cep")
-      let img_rua=document.getElementById("img-rua")
-      let img_numero=document.getElementById("img-numero")
-      let img_bairro=document.getElementById("img-bairro")
-      let img_cidade=document.getElementById("img-cidade") 
-      nome.value=""
-      cpf.value=""
-      email.value=''
-      cep.value=""
-      rua.value=""
-      numero.value=""
-      bairro.value=""
-      cidade.value=""
-      img_nome.src=""
-      img_cpf.src=""
-      img_cpf.src=""
-      img_email.src=""
-      img_cep.src=""
-      img_rua.src=""
-      img_numero.src=""
-      img_bairro.src=""
-      img_cidade.src=""
-      sendToast("Usuário adicionado!","success")
+    .then((response)=>{
+      if (response.ok){
+        let nome=document.getElementById("nome")
+        let cpf=document.getElementById("cpf")
+        let email=document.getElementById("email")
+        let cep=document.getElementById("cep")
+        let rua=document.getElementById("rua")
+        let numero=document.getElementById("numero")
+        let bairro=document.getElementById("bairro")
+        let cidade=document.getElementById("cidade")
+        let img_nome=document.getElementById("img-nome")
+        let img_cpf=document.getElementById("img-cpf")
+        let img_email=document.getElementById("img-email")
+        let img_cep=document.getElementById("img-cep")
+        let img_rua=document.getElementById("img-rua")
+        let img_numero=document.getElementById("img-numero")
+        let img_bairro=document.getElementById("img-bairro")
+        let img_cidade=document.getElementById("img-cidade") 
+        nome.value=""
+        cpf.value=""
+        email.value=''
+        cep.value=""
+        rua.value=""
+        numero.value=""
+        bairro.value=""
+        cidade.value=""
+        img_nome.src=""
+        img_cpf.src=""
+        img_cpf.src=""
+        img_email.src=""
+        img_cep.src=""
+        img_rua.src=""
+        img_numero.src=""
+        img_bairro.src=""
+        img_cidade.src=""
+        sendToast("Usuário adicionado!","success")
+      }else{
+        sendToast("Não foi possivel se conectar.","warn")
+      }
+    })
+    .catch((error)=>{
+      sendToast("Não foi possivel adicionar o usuário.","error")
     })
   }
   async function PUT(
@@ -112,6 +119,7 @@ function AddUserForm(props) {
     ){
     console.log("passei no post")
     const Mydb=`http://localhost:5000/usuarios/${props.userID}`
+    console.log(props.userID)
      const data={
        id:"",
       nome:nome,
@@ -133,6 +141,16 @@ function AddUserForm(props) {
       }
     }
     fetch(Mydb,options)
+    .then((response)=>{
+      if (response.ok){
+        sendToast("Usuario editado!","success")
+      }else{
+        sendToast("Erro ao editar.","warn")
+      }
+    })
+    .catch((error)=>{
+      sendToast("Erro ao editar.","error")
+    })
   }
   if (localStorage.getItem("logged")=="true"){
   return (

@@ -14,6 +14,7 @@ function ListUser(props){
     }
     function edit(evt) {
         let id =(evt.target.id)
+        console.log(id)
         setEditPages(
             /* Passardados do usuario como props para serem usadas pelo "userForm" nas caixas de input */
             <EditPage 
@@ -35,7 +36,7 @@ function ListUser(props){
                     <img width="20px" src="images/icons/ico_delete.png"></img>
                 </button>
                 <button
-                    id={props.id} onClick={edit}>
+                    id={props.userID} onClick={edit}>
                     <img width="20px" src="images/icons/ico_edit.png"></img>
                 </button>
             </span>

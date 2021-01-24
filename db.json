@@ -2,7 +2,7 @@
   "usuarios": [
     {
       "id": 1,
-      "nome": "pedro 1",
+      "nome": "Pedro ",
       "cpf": "100.321.336.77",
       "email": "contato.pedronestor@gmail.com",
       "endereco": {
@@ -193,6 +193,32 @@
         "numero": "2",
         "bairro": "moca",
         "cidade": "e"
+      }
+    },
+    {
+      "id": 16,
+      "nome": "pedro",
+      "cpf": "100.321.336.77",
+      "email": "pedro_pratapolis@hotmail.com",
+      "endereco": {
+        "cep": "37970000",
+        "rua": "rua2",
+        "numero": "1",
+        "bairro": "moca",
+        "cidade": "Pratápolis"
+      }
+    },
+    {
+      "id": 17,
+      "nome": "pedro",
+      "cpf": "100.321.336.77",
+      "email": "pedro_pratapolis@hotmail.com",
+      "endereco": {
+        "cep": "37970000",
+        "rua": "rua2",
+        "numero": "2",
+        "bairro": "moca",
+        "cidade": "Pratápolis"
       }
     }
   ]

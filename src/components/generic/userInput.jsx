@@ -12,9 +12,8 @@ function UserInput(props){
                 onChange={props.func} maxLength={props.size} onBlur={props.Blur} 
                 type={props.type} defaultValue={props.value} >
             </input>
-
             <img 
-                width="20px" allt="" id={props.id_img}>
+                width="25px" alt="" id={props.id_img}>
             </img>
         </UserInputS>
     )

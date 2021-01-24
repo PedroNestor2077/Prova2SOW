@@ -1,8 +1,9 @@
 import React,{useEffect,useState} from "react"
 import {ListContainer,ListHeader,List} from "../style"
 import ListRow from "../generic/listRow"
-import {ToolsListBarS,SearchBar,Pages} from "../style"
+import {ToolsListBarS,SearchBar,Pages,Load} from "../style"
 import NotLogged from "../generic/notLogged"
+import CircularProgress from "@material-ui/core/CircularProgress";
 function ListUser(){
     const options={
         method:'GET',
@@ -13,7 +14,11 @@ function ListUser(){
     const [Lista,setLista]=useState()
     const [Page,setPage]=useState(1)
     async function update(url){
-        setLista(<h1>loading...</h1>)
+        setLista(
+            <Load>
+                <CircularProgress color="inherit" />
+            </Load>
+        )
         const UsersResponse=await fetch(url,options);
         const MyUsers=await UsersResponse.json()
         /* Criar lista de elementos react para a listagem */
@@ -34,15 +39,23 @@ function ListUser(){
                 rua={MyUsers[user].endereco.rua}
                     />)
         };
-        setLista(RowList)
+        if (RowList.length==0){
+            setLista(
+            <Load>
+                <h1>Nada a exibir.</h1>
+            </Load>
+            )
+        }else{
+            setLista(RowList)
+        }
     };
     function doSearch() {
         let text=document.getElementById("search").value
-        let url=`http://localhost:5000/usuarios?q=${text}&_limit=11`
+        let url=`http://localhost:5000/usuarios?q=${text}&_limit=10`
         update(url)
     };
     /* Atualizar a lista sempre que a lista for renderizada */
-    useEffect(()=>update(`http://localhost:5000/usuarios?_page=${Page}&_limit=11`),[Page])
+    useEffect(()=>update(`http://localhost:5000/usuarios?_page=${Page}&_limit=10`),[Page])
     if (localStorage.getItem("logged")=="true"){
         return(
         <ListContainer>
@@ -57,10 +70,20 @@ function ListUser(){
                         </SearchBar>
                         <Pages>
                             <span>
-                                <button onClick={()=>setPage(Page-1)}> ≺ </button>
+                                <button onClick={()=>{
+                                    if(Page>0){
+                                        setPage(Page-1)
+                                    }else{
+                                        setPage(0)
+                                    }
+                                    
+                                }}>≺ </button>
                                 <p>{Page}</p>
-                                <button onClick={()=>setPage(Page+1)}> ≻ </button>
-                                <button onClick={()=>update(`http://localhost:5000/usuarios?_page=${Page}&_limit=11`)}><img width="20px" src="images/icons/ico_reload.png"></img></button>
+                                <button onClick={()=>{
+                                        setPage(Page+1)
+                                    }
+                                }>≻</button>
+                                <button onClick={()=>update(`http://localhost:5000/usuarios?_page=${Page}&_limit=10`)}><img width="20px" src="images/icons/ico_reload.png"></img></button>
                             </span>
                         </Pages>
                     </ToolsListBarS>

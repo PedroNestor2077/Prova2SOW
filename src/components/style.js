@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-/* ------------GENERIC COMPONENTS------------ */
+/* -------------------------GENERIC COMPONENTS------------------ */
 export const TopBar = styled.div`
     background-color:rgba(32, 32, 32, 0.834);
     width:100%;
@@ -93,7 +93,57 @@ export const UserInputS = styled.span`
         }
     }
 `;
-/* ------------------ADD USER----------- */
+/* -------------------------------LOGIN--------------------------- */
+export const LoginBody =styled.div`
+    width:100%;
+    background-color:white;
+    height:auto;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    align-items:center;
+    flex-wrap:nowrap;
+`;
+export const LoginFormS = styled.div`
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    align-items:center;
+    width:30%;
+    height:100%;
+    border-radius:30px;
+    background-color:#D3D3D3;
+    margin-top:30px;
+    padding:10px;
+    div{
+        display:flex;
+        justify-content:space-around;
+        flex-direction:column;
+        height:90%;
+        width:95%;
+        button{
+            height:45px;
+            background-color:rgb(60, 81, 202);
+            border:none;
+            border-radius:5px;
+            color:white;
+            font-size:20px;
+            margin-top:10px;
+            cursor:pointer;
+            outline: thin dotted;
+            outline: 0px auto -webkit-focus-ring-color;
+            outline-offset: 0px;
+            box-shadow:2px 2px 2px 1px rgba(0,0,0,.5);
+            &:hover{
+                background-color:blue;
+                text-shadow:2px 2px black;
+                box-shadow:2px 2px 2px 1px rgba(0,0,0,.7);
+            }
+        }
+    }
+`;
+/* -----------------------ADD USER------------------------------- */
 export const AddBody =styled.div`
     width:100%;
     background-color:white;
@@ -113,7 +163,7 @@ export const UserForm = styled.div`
     width:90%;
     height:100%;
     border-radius:30px;
-    background-color:rgb(192, 188, 188);
+    background-color:#D3D3D3;
     padding:20px;
     margin-top:30px;
     div{
@@ -145,57 +195,7 @@ export const UserForm = styled.div`
         }
     }
 `;
-/* -------------------LOGIN------------- */
-export const LoginBody =styled.div`
-    width:100%;
-    background-color:white;
-    height:auto;
-    min-height:100vh;
-    display:flex;
-    flex-direction:column;
-    justify-content:flex-start;
-    align-items:center;
-    flex-wrap:nowrap;
-`;
-export const LoginFormS = styled.div`
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-    align-items:center;
-    width:30%;
-    height:100%;
-    border-radius:30px;
-    background-color:rgb(192, 188, 188);
-    margin-top:30px;
-    padding:10px;
-    div{
-        display:flex;
-        justify-content:space-around;
-        flex-direction:column;
-        height:90%;
-        width:95%;
-        button{
-            height:45px;
-            background-color:rgb(60, 81, 202);
-            border:none;
-            border-radius:5px;
-            color:white;
-            font-size:20px;
-            margin-top:10px;
-            cursor:pointer;
-            outline: thin dotted;
-            outline: 0px auto -webkit-focus-ring-color;
-            outline-offset: 0px;
-            box-shadow:2px 2px 2px 1px rgba(0,0,0,.5);
-            &:hover{
-                background-color:blue;
-                text-shadow:2px 2px black;
-                box-shadow:2px 2px 2px 1px rgba(0,0,0,.7);
-            }
-        }
-    }
-`;
-/* --------------LIST USERS----------- */
+/* -------------------------------LIST---------------------- */
 export const ListBody =styled.div`
     width:100%;
     background-color:white;
@@ -221,8 +221,9 @@ export const ListContainer =styled.div`
 export const List =styled.div`
     width:100%;
     background-color:white;
-    border:solid black 3px;
-    height:90%;
+    border:solid black 2px;
+    height:auto;
+    min-height:480px;
     display:flex;
     align-items:top;
     flex-direction:column;
@@ -250,15 +251,14 @@ export const ListRow =styled.div`
     display:flex;
     justify-content:space-around;
     width:100%;
-    height:40px;
-    background-color:rgb(226, 223, 223);
+    height:10%;
+    background-color:#DCDCDC;
     margin-top:2px;
     border-top:solid black 1px;
     span{  
         width:25%;
         margin-left:5px;
         overflow:hidden;
-        text-overflow:ELLIPSIS;
         height:100%;
         min-height:39px;
         display:flex;
@@ -314,6 +314,14 @@ export const SearchBar =styled.div`
        
     }
 `;
+export const Load =styled.div`
+    width:100%;
+    height:100%;
+    display:flex;
+    align-items:center;   
+    justify-content:center;
+`;
+/* ----------------------------EDIT PAGE----------------------------- */
 export const Pages =styled.div`
     width:50%;
     height:100%;
@@ -336,7 +344,7 @@ export const Pages =styled.div`
         }
     }
 `;
-export const EditPageS =styled.button`
+export const EditPageS =styled.div`
     position:absolute;
     top:0px;
     left:0px;
@@ -345,12 +353,12 @@ export const EditPageS =styled.button`
     display:flex;
     justify-content:center;
     align-items:center;
-    background-color:rgba(59, 59, 59, 0.801);
+    background-color:rgba(59, 59, 59, 0.701);
     h3{
         width:100%;
     }
     div{
-        background-color:gray;
+        background-color:#D3D3D3;
         display:flex;
         justify-content:center;
         flex-direction:column;
