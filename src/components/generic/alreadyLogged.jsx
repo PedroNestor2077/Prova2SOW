@@ -1,4 +1,3 @@
-import {AddBody} from "../style"
 function AlreadyLogged() {
     return (
       <div>
@@ -6,7 +5,8 @@ function AlreadyLogged() {
           <a
             href="/" onClick={()=>
             localStorage.setItem('logged',false)}>
-            Singout</a>
+            Singout
+          </a>
       </div>
     );
 }

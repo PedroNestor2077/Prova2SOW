@@ -1,4 +1,3 @@
-import {AddBody} from "../style"
 function NotLogged() {
     return (
       <div>

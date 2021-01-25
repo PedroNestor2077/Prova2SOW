@@ -3,7 +3,6 @@ import {ListRowS} from "../style"
 import EditPage from "../generic/editPage"
 import {sendToast} from "../functions"
 function ListRow(props){
-    console.log(props.userID)
     const [ShowEditPage,setEditPages]=useState('')
     function del(evt){
         let id =(evt.target.id)
@@ -22,13 +21,11 @@ function ListRow(props){
         })
     }
     function edit(evt) {
-        let id =(evt.target.id)
-        console.log(id)
         setEditPages(
-            /* Passardados do usuario como props para serem usadas pelo "userForm" nas caixas de input */
+            /* Passar dados do usuario como props para serem usadas pelo "userForm" nas caixas de input */
             <EditPage 
-                nome={props.nome} cpf={props.cpf} email={props.email} 
-                cidade={props.cidade} userID={props.userID} rua={props.rua} action="PUT"
+                nome={props.nome} cpf={props.cpf} email={props.email} action="PUT"
+                cidade={props.cidade} userID={props.userID} rua={props.rua} 
                 numero={props.numero} bairro={props.bairro} cep={props.cep} >
             </EditPage>
         )
@@ -42,11 +39,17 @@ function ListRow(props){
             <span >
                 <button 
                     id={props.userID} onClick={del}>
-                    <img id={props.userID} width="20px" src="images/icons/ico_delete.png"></img>
+                    <img
+                        id={props.userID} width="20px" alt=""
+                        src="images/icons/ico_delete.png">  
+                    </img>
                 </button>
                 <button
                     id={props.userID} onClick={edit}>
-                    <img id={props.userID} width="20px" src="images/icons/ico_edit.png"></img>
+                    <img 
+                        id={props.userID} width="20px" alt="" 
+                        src="images/icons/ico_edit.png">
+                    </img>
                 </button>
             </span>
             {/* State que retorna a página "EditPage*/}

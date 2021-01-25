@@ -3,13 +3,13 @@ import 'react-toastify/dist/ReactToastify.css'
 toast.configure()
 /* -------------------------FUNÇOES DIVERÇAS----------------- */
 export function sendToast(msg,mode){
-  if (mode=="error"){
+  if (mode==="error"){
     return toast.error(msg)
   }
-  else if(mode=="success"){
+  else if(mode==="success"){
     return toast.success(msg)
   }
-  else if(mode=="warn"){
+  else if(mode==="warn"){
   return toast.warn(msg)
   }
   else{
@@ -34,11 +34,11 @@ export function checkEmail(input){
     
     if ((usuario.length >=1) &&
         (dominio.length >=3) &&
-        (usuario.search("@")==-1) &&
-        (dominio.search("@")==-1) &&
-        (usuario.search(" ")==-1) &&
-        (dominio.search(" ")==-1) &&
-        (dominio.search(".")!=-1) &&
+        (usuario.search("@")===-1) &&
+        (dominio.search("@")===-1) &&
+        (usuario.search(" ")===-1) &&
+        (dominio.search(" ")===-1) &&
+        (dominio.search(".")!==-1) &&
         (dominio.indexOf(".") >=1)&&
         (dominio.lastIndexOf(".") < dominio.length - 1)) 
         {
@@ -59,10 +59,10 @@ export function dinamicEmail(){
 export function checkCPF(){
   const input=document.getElementById("cpf")
   const cpf=input.value
-  if(cpf.length==3 || cpf.length==7){
+  if(cpf.length===3 || cpf.length===7){
     input.value=(cpf+".")
   }
-  if(cpf.length==11){
+  if(cpf.length===11){
     input.value=(cpf+"-")
   }
   if(cpf.length>14){
@@ -71,7 +71,7 @@ export function checkCPF(){
   }
 };
 export function isEmpty(iten){
-  if (iten != ""){
+  if (iten !== ""){
     return true
   }else{
     return false
@@ -79,21 +79,21 @@ export function isEmpty(iten){
 }
 export function ViaCEP(){
   let cep=document.getElementById('cep').value
-  if(cep.length==8){
+  if(cep.length===8){
     fetch(`https://viacep.com.br/ws/${cep}/json`)
       .then((RespostaDoServer)=>{
         return RespostaDoServer.json();
       })
       .then((DadosDoCep)=>{        
-        if (DadosDoCep.logadouro!=undefined){
+        if (DadosDoCep.logadouro!==undefined){
           let rua=document.getElementById('rua')
           rua.value=DadosDoCep.logadouro
         }
-        if (DadosDoCep.bairro!=undefined){
+        if (DadosDoCep.bairro!==undefined){
           let bairro=document.getElementById('bairro')
           bairro.value=DadosDoCep.bairro 
         }
-        if (DadosDoCep.localidade!=undefined){
+        if (DadosDoCep.localidade!==undefined){
           let cidade=document.getElementById('cidade')
           cidade.value=DadosDoCep.localidade
         }
@@ -111,7 +111,7 @@ export function ViaCEP(){
 export function dinamicNome(){
   const nome=document.getElementById("nome")
   let err_img=document.getElementById("img-nome")
-  if (nome.value==""){
+  if (nome.value===""){
     err_img.src="/images/icons/ico_invalid.png"
   }else{
     err_img.src="/images/icons/ico_valid.png"
@@ -120,7 +120,7 @@ export function dinamicNome(){
 export function dinamicCPF(){
   const cpf=document.getElementById("cpf")
   let err_img=document.getElementById("img-cpf")
-  if (cpf.value.length==14){
+  if (cpf.value.length===14){
     err_img.src="/images/icons/ico_valid.png"
   }else{
     err_img.src="/images/icons/ico_invalid.png"
@@ -129,7 +129,7 @@ export function dinamicCPF(){
 export function dinamicCidade(){
   const cidade=document.getElementById("cidade")
   let err_img=document.getElementById("img-cidade")
-  if (cidade.value==""){
+  if (cidade.value===""){
     err_img.src="/images/icons/ico_invalid.png"
   }else{
     err_img.src="/images/icons/ico_valid.png"
@@ -138,7 +138,7 @@ export function dinamicCidade(){
 export function dinamicRua(){
   const rua=document.getElementById("rua")
   let err_img=document.getElementById("img-rua")
-  if (rua.value==""){
+  if (rua.value===""){
     err_img.src="/images/icons/ico_invalid.png"
   }else{
     err_img.src="/images/icons/ico_valid.png"
@@ -147,7 +147,7 @@ export function dinamicRua(){
 export function dinamicNumero(){
   const numero=document.getElementById("numero")
   let err_img=document.getElementById("img-numero")
-  if (numero.value==""){
+  if (numero.value===""){
     err_img.src="/images/icons/ico_invalid.png"
   }else{
     err_img.src="/images/icons/ico_valid.png"
@@ -156,7 +156,7 @@ export function dinamicNumero(){
 export function dinamicBairro(){
   const bairro=document.getElementById("bairro")
   let err_img=document.getElementById("img-bairro")
-  if (bairro.value==""){
+  if (bairro.value===""){
     err_img.src="/images/icons/ico_invalid.png"
   }else{
     err_img.src="/images/icons/ico_valid.png"

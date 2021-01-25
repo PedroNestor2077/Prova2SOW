@@ -1,7 +1,6 @@
 import React,{useEffect,useState} from "react"
-import {ListContainer,ListHeader,List} from "../style"
+import {ListContainer,ListHeader,List,ToolsListBarS,SearchBar,Pages,Load} from "../style"
 import ListRow from "../generic/listRow"
-import {ToolsListBarS,SearchBar,Pages,Load} from "../style"
 import NotLogged from "../generic/notLogged"
 import CircularProgress from "@material-ui/core/CircularProgress";
 function ListUser(){
@@ -13,6 +12,7 @@ function ListUser(){
         }
     const [Lista,setLista]=useState()
     const [Page,setPage]=useState(1)
+    
     async function update(url){
         setLista(
             <Load>
@@ -39,7 +39,7 @@ function ListUser(){
                 rua={MyUsers[user].endereco.rua}
                     />)
         }; 
-        if (RowList.length==0){
+        if (RowList.length===0){
             setLista(
             <Load>
                 <h1>Nada a exibir.</h1>
@@ -49,21 +49,25 @@ function ListUser(){
             setLista(RowList)
         }
     };
+
     function doSearch() {
         let text=document.getElementById("search").value
         let url=`http://localhost:5000/usuarios?q=${text}&_limit=10`
         update(url)
     };
-    /* Atualizar a lista sempre que a lista for renderizada */
+
+    /* Atualizar a lista sempre que for renderizada ou quando a pagina for alterada */
     useEffect(()=>update(`http://localhost:5000/usuarios?_page=${Page}&_limit=10`),[Page])
-    if (localStorage.getItem("logged")=="true"){
+
+
+    if (localStorage.getItem("logged")==="true"){
         return(
         <ListContainer>
                     <ToolsListBarS>
                         <SearchBar>
                             <div>
                                 <button onClick={doSearch}>
-                                    <img src="/images/icons/ico_find.png" width="40px"></img>
+                                    <img alt="" src="/images/icons/ico_find.png" width="40px"></img>
                                 </button>
                                 <input id='search' placeholder="Buscar..."></input>
                             </div>
@@ -83,7 +87,11 @@ function ListUser(){
                                         setPage(Page+1)
                                     }
                                 }>≻</button>
-                                <button onClick={()=>update(`http://localhost:5000/usuarios?_page=${Page}&_limit=10`)}><img width="20px" src="images/icons/ico_reload.png"></img></button>
+                                <button onClick={
+                                    ()=>update(`http://localhost:5000/usuarios?_page=${Page}&_limit=10`)
+                                }>
+                                    <img alt="" width="20px" src="images/icons/ico_reload.png"></img>
+                                </button>
                             </span>
                         </Pages>
                     </ToolsListBarS>

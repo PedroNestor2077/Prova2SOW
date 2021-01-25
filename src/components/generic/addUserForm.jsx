@@ -29,8 +29,7 @@ function AddUserForm(props) {
         checkEmail(email)
       )
         {
-          console.log(props.action)
-          if(props.action=="PUT"){
+          if(props.action==="PUT"){
             PUT(
               nome.value,cpf.value,email.value,rua.value,
               bairro.value,cidade.value,cep.value,numero.value
@@ -117,9 +116,7 @@ function AddUserForm(props) {
   async function PUT(
     nome,cpf,email,rua,bairro,cidade,cep,numero
     ){
-    console.log("passei no post")
     const Mydb=`http://localhost:5000/usuarios/${props.userID}`
-    console.log(props.userID)
      const data={
        id:"",
       nome:nome,
@@ -152,7 +149,7 @@ function AddUserForm(props) {
       sendToast("Erro ao editar.","error")
     })
   }
-  if (localStorage.getItem("logged")=="true"){
+  if (localStorage.getItem("logged")==="true"){
   return (
     <UserForm>
       <div>

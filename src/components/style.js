@@ -2,7 +2,7 @@ import styled from "styled-components"
 
 /* -------------------------GENERIC COMPONENTS------------------ */
 export const TopBar = styled.div`
-    background-color:rgba(32, 32, 32, 0.834);
+    background-color:rgba(32, 32, 32,.9);
     width:100%;
     height:80px;
     display:flex;
@@ -89,7 +89,7 @@ export const UserInputS = styled.span`
         outline-offset: 0px;
         font-size:20px;
         &:focus{
-            box-shadow:0px 0px 10px 2px rgba(0, 0, 255, 0.788);
+            box-shadow:0px 0px 10px 2px rgba(0, 0, 255, 0.388);
         }
     }
 `;
